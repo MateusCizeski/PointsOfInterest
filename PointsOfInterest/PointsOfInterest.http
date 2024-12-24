@@ -1,0 +1,6 @@
+@PointsOfInterest_HostAddress = http://localhost:5148
+
+GET {{PointsOfInterest_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
