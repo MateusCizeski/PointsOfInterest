@@ -1,4 +1,7 @@
-﻿namespace Domain.Entities
+﻿using Domain.Core;
+using Domain.Core.Exceptions;
+
+namespace Domain.Entities
 {
     public sealed class PointOfInterest : Entity
     {
