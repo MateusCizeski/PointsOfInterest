@@ -1,34 +1,61 @@
 ﻿using Application.DTOs;
 using Application.Interfaces;
+using Domain.Core.Intefaces;
 using Domain.Entities;
 
 namespace Application.Services
 {
     public class GpsService : IGpsService
     {
-        public Task<PointOfInterest> CreatePointOfInterest(CreatePointOfInterestDTO dto)
+        private readonly IPointOfInterestRepository _pointOfInterestRepository;
+
+        public GpsService(IPointOfInterestRepository pointOfInterestRepository)
         {
-            throw new NotImplementedException();
+            _pointOfInterestRepository = pointOfInterestRepository;
         }
 
-        public Task DeleteById(Guid id)
+        public async Task<PointOfInterest> CreatePointOfInterest(CreatePointOfInterestDTO dto)
         {
-            throw new NotImplementedException();
+            PointOfInterest newPoi = new(dto.Name, dto.X, dto.Y);
+
+            var result = await _pointOfInterestRepository.Add(newPoi);
+
+            return result;
         }
 
-        public Task<IEnumerable<PointOfInterest>> GetAllPointsOfInterest(Guid id)
+        public async Task DeleteById(Guid id)
         {
-            throw new NotImplementedException();
+           var pointEntity = await _pointOfInterestRepository.GetById(id);
+
+            if (pointEntity is null) return;
+
+            await _pointOfInterestRepository.Delete(pointEntity);
         }
 
-        public Task<IEnumerable<PointOfInterest>> GetNearbyPointsOfInterest(int x, int y, int maxDistance)
+        public async Task<IEnumerable<PointOfInterest>> GetAllPointsOfInterest()
         {
-            throw new NotImplementedException();
+            return await _pointOfInterestRepository.GetAllWhere(p => true);
         }
 
-        public Task<PointOfInterest?> GetPointOfInterestById(Guid id)
+        public async Task<IEnumerable<PointOfInterest>> GetNearbyPointsOfInterest(int x, int y, int maxDistance)
         {
-            throw new NotImplementedException();
+            var points = await GetAllPointsOfInterest();
+
+            List<PointOfInterest> nearbybyPoints = new();
+
+            foreach (var point in points) 
+            {
+                double distance = Math.Sqrt(Math.Pow(x - point.X, 2) + Math.Pow(y - point.Y, 2));
+
+                if(distance <= maxDistance) nearbybyPoints.Add(point);
+            }
+
+            return nearbybyPoints;
+        }
+
+        public async Task<PointOfInterest?> GetPointOfInterestById(Guid id)
+        {
+            return await _pointOfInterestRepository.GetById(id);
         }
     }
 }

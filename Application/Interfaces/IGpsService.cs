@@ -7,7 +7,7 @@ namespace Application.Interfaces
     {
         Task<PointOfInterest> CreatePointOfInterest(CreatePointOfInterestDTO dto);
         Task<PointOfInterest?> GetPointOfInterestById(Guid id);
-        Task<IEnumerable<PointOfInterest>> GetAllPointsOfInterest(Guid id);
+        Task<IEnumerable<PointOfInterest>> GetAllPointsOfInterest();
         Task<IEnumerable<PointOfInterest>> GetNearbyPointsOfInterest(int x, int y, int maxDistance);
         Task DeleteById(Guid id);
     }

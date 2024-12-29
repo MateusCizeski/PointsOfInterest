@@ -1,4 +1,4 @@
 ﻿namespace Application.DTOs
 {
-    public class CreatePointOfInterestDTO(string Name, int X, int Y) { }
+    public record CreatePointOfInterestDTO(string Name, int X, int Y) { }
 }
