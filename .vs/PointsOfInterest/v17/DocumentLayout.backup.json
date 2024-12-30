@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Desenvolvimento\\PointsOfInterest\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{83719891-4DDD-4FA9-9692-92E92BB05F31}|Infrastructure\\Infrastructure.csproj|c:\\desenvolvimento\\pointsofinterest\\infrastructure\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83719891-4DDD-4FA9-9692-92E92BB05F31}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83719891-4DDD-4FA9-9692-92E92BB05F31}|Infrastructure\\Infrastructure.csproj|c:\\desenvolvimento\\pointsofinterest\\infrastructure\\repositories\\pointofinterestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83719891-4DDD-4FA9-9692-92E92BB05F31}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\pointofinterestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83719891-4DDD-4FA9-9692-92E92BB05F31}|Infrastructure\\Infrastructure.csproj|c:\\desenvolvimento\\pointsofinterest\\infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83719891-4DDD-4FA9-9692-92E92BB05F31}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{450ABF01-ED39-44A3-B505-652AEA679CB5}|Application\\Application.csproj|c:\\desenvolvimento\\pointsofinterest\\application\\services\\gpsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{450ABF01-ED39-44A3-B505-652AEA679CB5}|Application\\Application.csproj|solutionrelative:application\\services\\gpsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -22,11 +34,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Desenvolvimento\\PointsOfInterest\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Desenvolvimento\\PointsOfInterest\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T23:23:53.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "PointOfInterestRepository.cs",
+              "DocumentMoniker": "C:\\Desenvolvimento\\PointsOfInterest\\Infrastructure\\Repositories\\PointOfInterestRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\PointOfInterestRepository.cs",
+              "ToolTip": "C:\\Desenvolvimento\\PointsOfInterest\\Infrastructure\\Repositories\\PointOfInterestRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\PointOfInterestRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T23:22:53.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Desenvolvimento\\PointsOfInterest\\Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "C:\\Desenvolvimento\\PointsOfInterest\\Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T23:21:58.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "IGpsService.cs",
               "DocumentMoniker": "C:\\Desenvolvimento\\PointsOfInterest\\Application\\Interfaces\\IGpsService.cs",
               "RelativeDocumentMoniker": "Application\\Interfaces\\IGpsService.cs",
@@ -39,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "CreatePointOfInterestDTO.cs",
               "DocumentMoniker": "C:\\Desenvolvimento\\PointsOfInterest\\Application\\DTOs\\CreatePointOfInterestDTO.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\CreatePointOfInterestDTO.cs",
@@ -52,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "GpsService.cs",
               "DocumentMoniker": "C:\\Desenvolvimento\\PointsOfInterest\\Application\\Services\\GpsService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\GpsService.cs",
