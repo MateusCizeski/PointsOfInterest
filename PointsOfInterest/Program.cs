@@ -1,4 +1,5 @@
 using Application;
+using Infrastructure;
 using PointsOfInterest.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -1,9 +1,10 @@
 ﻿using Domain.Core.Exceptions;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
 namespace PointsOfInterest.Middlewares
 {
-    internal sealed class InvalidDataExceptionHandler
+    internal sealed class InvalidDataExceptionHandler : IExceptionHandler
     {
         private readonly ILogger<InvalidDataExceptionHandler> _logger;
 
@@ -12,7 +13,7 @@ namespace PointsOfInterest.Middlewares
             _logger = logger;
         }
 
-        public async ValueTask<bool> TryHanldeAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken)
+        public async ValueTask<bool> TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken)
         {
             if (exception is not NotValidDataException notValidDataException) return false;
 
