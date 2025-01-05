@@ -1,29 +1,44 @@
 ﻿using Domain.Core.Intefaces;
 using Domain.Entities;
+using Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
 namespace Infrastructure.Repositories
 {
-    public class PointOfInterestRepository : IPointOfInterestRepository
+    internal class PointOfInterestRepository : IPointOfInterestRepository
     {
-        public Task<PointOfInterest> Add(PointOfInterest pointOfInterest)
+        private readonly ApplicationDbContext _context;
+
+        public PointOfInterestRepository(ApplicationDbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
         }
 
-        public Task Delete(PointOfInterest pointOfInterest)
+        public async Task<PointOfInterest> Add(PointOfInterest pointOfInterest)
         {
-            throw new NotImplementedException();
+            var reactionResult = await _context.AddAsync(pointOfInterest);
+
+            await _context.SaveChangesAsync();
+
+            return reactionResult.Entity;
         }
 
-        public Task<IEnumerable<PointOfInterest>> GetAllWhere(Expression<Func<PointOfInterest, bool>> predicate)
+        public async Task Delete(PointOfInterest pointOfInterest)
         {
-            throw new NotImplementedException();
+            _context.PointOfInterest.Remove(pointOfInterest);
+
+            await _context.SaveChangesAsync();
         }
 
-        public Task<PointOfInterest> GetById(Guid id)
+        public async Task<IEnumerable<PointOfInterest>> GetAllWhere(Expression<Func<PointOfInterest, bool>> predicate)
         {
-            throw new NotImplementedException();
+            return await _context.PointOfInterest.ToListAsync();
+        }
+
+        public async Task<PointOfInterest> GetById(Guid id)
+        {
+            return await _context.PointOfInterest.FirstOrDefaultAsync(p => p.Id == id);
         }
     }
 }
