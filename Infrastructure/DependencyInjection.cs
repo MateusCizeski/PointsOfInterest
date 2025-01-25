@@ -11,7 +11,7 @@ namespace Infrastructure
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
-            string connectionString = configuration.GetConnectionString("SqliteConnectionString");
+            string connectionString = configuration.GetConnectionString("SqliteConnectionString")!;
 
             services.AddDbContext<ApplicationDbContext>(opts =>
             {
